@@ -1,10 +1,13 @@
 [project]
 name = "ai-agent-event-playground"
 version = "0.1.0"
-description = "Add your description here"
+description = "Example agent built on the Microsoft Agent Framework + OpenAI"
 readme = "README.md"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "agent-framework-openai>=1.8.1",
+    "python-dotenv>=1.2.2",
+]
 
 [project.scripts]
 ai-agent-event-playground = "ai_agent_event_playground.main:main"
@@ -24,3 +27,6 @@ dev = [
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+
+[tool.pyright]
+extraPaths = ["src"]
